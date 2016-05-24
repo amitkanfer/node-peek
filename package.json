@@ -4,7 +4,7 @@
     "name": "kanfer"
   },
   "name": "socket-peek",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "NodeJS wrapper to peek bytes from a given socket file descriptor",
   "main": "index.js",
   "directories": {
