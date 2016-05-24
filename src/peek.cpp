@@ -4,7 +4,7 @@
 #include <sys/socket.h>
 #include "nan.h"
 
-#define MAX(x,y) ((x) > (y) ? (x) : (y))
+#define MIN(x,y) ((x) < (y) ? (x) : (y))
 
 using namespace v8;
 using namespace node;
@@ -38,7 +38,7 @@ NAN_METHOD(Peek) {
         return;
     }
 
-    int bytes2read = MAX(bytes_available, buffer_size);
+    int bytes2read = MIN(bytes_available, buffer_size);
     res = recv(fd, argp, bytes2read, MSG_PEEK);
     info.GetReturnValue().Set(res);
 }
