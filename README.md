@@ -1,7 +1,7 @@
 node-peek
 ==========
 
-node recv-peek wrapper
+NodeJs wrapper that peeks bytes from a given socket file descriptor
 
 Installation
 ------------
