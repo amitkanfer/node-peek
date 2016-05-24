@@ -1,0 +1,35 @@
+{
+  "name": "peek",
+  "version": "0.0.1",
+  "description": "NodeJS wrapper to peek bytes from a given socket file descriptor",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "bindings": "^1.1.1",
+    "nan": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitkanfer/node-peek.git"
+  },
+  "keywords": [
+    "peek",
+    "recv",
+    "c++",
+    "TLS"
+  ],
+  "author": "Amit Kanfer",
+  "license": "MIT",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/amitkanfer/node-peek/issues"
+  },
+  "homepage": "https://github.com/amitkanfer/node-peek#readme"
+}
