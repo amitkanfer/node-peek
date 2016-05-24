@@ -9,7 +9,7 @@ Installation
 Install with `npm`:
 
 ``` bash
-$ npm install node-peek
+$ npm install socket-peek
 ```
 
 Examples
