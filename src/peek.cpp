@@ -40,6 +40,12 @@ NAN_METHOD(Peek) {
 
     int bytes2read = MIN(bytes_available, buffer_size);
     res = recv(fd, argp, bytes2read, MSG_PEEK);
+
+    if (res == -1) {
+        info.GetReturnValue().Set(-errno);
+        return;
+    }
+ 
     info.GetReturnValue().Set(res);
 }
 
