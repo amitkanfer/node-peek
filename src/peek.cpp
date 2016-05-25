@@ -30,16 +30,8 @@ NAN_METHOD(Peek) {
     void* argp = Buffer::Data(buf);
     int fd = info[0]->Int32Value();
     int buffer_size = info[1]->IntegerValue();
-    int bytes_available = 0;
 
-    int res = ioctl(fd, FIONREAD, &bytes_available);
-    if (res == -1) {
-        info.GetReturnValue().Set(-errno);
-        return;
-    }
-
-    int bytes2read = MIN(bytes_available, buffer_size);
-    res = recv(fd, argp, bytes2read, MSG_PEEK);
+    int res = recv(fd, argp, buffer_size, MSG_PEEK | MSG_DONTWAIT);
 
     if (res == -1) {
         info.GetReturnValue().Set(-errno);
